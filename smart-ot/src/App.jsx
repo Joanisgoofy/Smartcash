@@ -7,6 +7,9 @@ import Agent from './sections/Agent';
 import Footers from './components/Footers';
 import LoginPage from './Pages/LoginPage'; // Import LoginPage
 import Signup from "./Pages/Signup"; // Import Signup
+import AboutUs from './sections/aboutus';
+
+
 
 const App = () => {
   return (
@@ -24,6 +27,7 @@ const App = () => {
       </main>
       <Services/>
       <Agent/>
+      <AboutUs />
       <Footers />
     </div>
   </Router>

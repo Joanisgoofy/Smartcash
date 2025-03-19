@@ -14,7 +14,7 @@ const Header = () => {
           <a href="#services">Products & Services</a>
           <a href="">Locate an Agent</a>
           <a href="#help">Help & Support</a>
-          <a href="">About Us</a>
+          <a href="about">About Us</a>
           <a href="#agent">Become an Agent</a>
         </div>
         <div className='cta'>
