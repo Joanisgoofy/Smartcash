@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   return (
-    <div>
+    <div id='login'>
       <form className="space-y-6" method="POST">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">Username</label>

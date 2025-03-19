@@ -13,7 +13,6 @@ import AboutUs from './sections/aboutus';
 
 const App = () => {
   return (
-    <Router>
     <div className="app-container">
       <Header />
       <main>
@@ -30,7 +29,6 @@ const App = () => {
       <AboutUs />
       <Footers />
     </div>
-  </Router>
   );
 };
 

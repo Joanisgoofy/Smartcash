@@ -10,7 +10,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 5%;
-  background: rgb(2, 48, 2); /* Dark background */
+  background: white; /* Dark background */
   color: white;
   position: sticky;
   top: 0;
@@ -22,6 +22,9 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+}
+.logo h1 {
+ color:black
 }
 
 /* Navigation */
@@ -37,19 +40,20 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: rgb(5, 5, 5);
   font-size: 1rem;
   padding: 8px 12px;
   transition: color 0.3s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-links a:hover {
-  color: #ffcc00; /* Highlight color */
+  color: blue; /* Highlight color */
 }
 
 /* Call-to-Action Button */
 .cta {
-  background: #ffcc00;
+  background: #4400ff;
   color: #333;
   padding: 10px 15px;
   border: none;
@@ -60,7 +64,7 @@ header {
 }
 
 .cta:hover {
-  background: #e6b800;
+  background: #1700e6;
 }
 textarea {
   width: 100%;

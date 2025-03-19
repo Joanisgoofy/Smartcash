@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'; // Import Link
 import Logo from '../assets/Logo.webp'
 import '../App.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
