@@ -9,6 +9,7 @@ import LoginPage from './Pages/LoginPage.jsx'
 import Signup from './Pages/Signup.jsx'
 import Heros from './sections/Heros.jsx'
 import { Footer } from 'flowbite-react'
+import About from './sections/About.jsx'
 
 const root = document.getElementById('root');
 
@@ -19,6 +20,7 @@ ReactDOM.createRoot(root).render(
           <Route path="/" element={<App />} />
           <Route path="/services" element={<Services />} />
           <Route path="/agent" element={<Agent />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
           

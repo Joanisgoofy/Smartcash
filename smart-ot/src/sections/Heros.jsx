@@ -4,7 +4,7 @@ import Logo from '../assets/Logo.webp'
 const Heros = () => {
   return (
     <>
-   <section id='about' className=' w-full m-auto lg:px-40 px-10 py-20 grid lg:grid-cols-2 grid-cols-1 justify-center items-center gap-10'>
+   <section id='' className=' w-full m-auto lg:px-40 px-10 py-20 grid lg:grid-cols-2 grid-cols-1 justify-center items-center gap-10'>
       <div>
         <img src={Logo} alt="about image" className='rounded-2xl lg:w-[500px] lg:h-[600px]' />
       </div>

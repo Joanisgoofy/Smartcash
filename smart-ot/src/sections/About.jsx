@@ -1,15 +1,15 @@
-import React from 'react'
-import { service } from '../components/export';
-import { Button, Checkbox, Label, TextInput } from "flowbite-react";
+import { useState } from "react";
 import Logo from '../assets/Logo.webp'
 import '../App.css'
-import { Link } from 'react-router-dom';
 import { Footer } from "flowbite-react";
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
+import { Link } from 'react-router-dom'
 
-const Services = () => {
+const AboutUs = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
   return (
-    <>
+    <div id="about" >
       <header>
         <div className='logo'>
           <h1>Smart-OT</h1>
@@ -28,28 +28,56 @@ const Services = () => {
           </Link>
         </div>
       </header>
-      <section id='services' className='lg:w-[95%] w-full h-fit m-auto rounded-xl flex flex-col justify-center items-start lg:px-20 px-6 py-20 gap-10'>
-        <div className='flex flex-col justify-center items-start gap-4'>
-          <h1 data-aos="zoom-in" className='text-red-500 dark:text-white'>OUR SERVICES</h1>
-          <h1 data-aos="zoom-in" className='text-black text-[40px] font-semibold leading-10 dark:text-white'>Top real estate <br /> services available</h1>
-        </div>
+      <div className="p-5">
+        <section className="ml-10">
+          <div className="mb-4">
+            <h3 className="text-black-500 font-bold text-3xl">ABOUT US</h3>
+          </div>
 
-        <div id='service-box' className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-8'>
-          {
-            service.map((item, index) => (
-              <div data-aos="zoom-in" data-aos-delay="200" key={index} className='bg-white dark:bg-black h-[350px] px-8 py-16 flex flex-col justify-center items-start gap-4 rounded-xl border-b-[5px] border-red-600 hover:bg-red-300 cursor-pointer'>
-                <div className='p-6 rounded-full bg-red-200'>
-                  <item.icon className='text-red-600 size-10 transform hover:scale-110 transition-transform duration-300 cursor-pointer' />
-                </div>
+          <div>
+            <h4>
+              <span className="font-bold">SMART-OT</span> is a leading and
+              innovative Payment Service Bank with an overarching vision of
+              bridging the financial divide by providing rural and urban
+              Nigerians secured and reliable banking services as well as
+              supporting the Central Bank of Nigeria’s (CBN) drive to ensure
+              financial inclusion for every Nigerian. With its corporate
+              headquarters in Lagos, Nigeria, Smart-OT’s overarching objective is
+              to ensure financial inclusion for everyone including persons in the
+              furthest and remotest parts of Nigeria.
+            </h4>
+          </div>
+        </section>
 
-                <h1 className='text-black text-[22px] font-semibold dark:text-white'>{item.title}</h1>
-                <p className='text-lg text-slate-700 dark:text-white'>{item.desc}</p>
-                
-              </div>
-            ))
-          }
-        </div>
-      </section>
+        <section
+          className={`flex ml-5 font-bold text-2xl mt-20 inline-block border-b-2 pb-3 cursor-pointer ${isClicked ? "text-red-500 border-b-red-500" : ""
+            }`}
+          onClick={() => setIsClicked(true)}
+        >
+          <p className="mx-4 inline-block">At A Glance</p>
+          <p className="mx-4 inline-block">Our Values</p>
+          <p className="mx-4 inline-block">Board of Directors</p>
+        </section>
+
+        <section className="ml-10 mt-10">
+          <div>
+            <h3 className="text-2xl font-bold mb-5">At A Glance</h3>
+
+            <h4>
+              SMART-OT was established in 2025 following the approval of the
+              Central Bank of Nigeria to actualize its financial inclusion goal
+              for every Nigerian, especially the unbanked and underbanked.
+              Smart-OT enables Person-to-Person payment service (P2P) that allows
+              individuals to send and receive money from anyone around the globe
+              through their mobile phones or at the nearest merchant shop outlet.
+              The primary purpose of Smart-OT is to deepen financial inclusion,
+              appropriating high-volume and low-value transactions in a safe,
+              technology-driven environment.
+            </h4>
+          </div>
+        </section>
+      </div>
+
       <Footer id="help" container className='bg-black'>
         <div className="w-full">
           <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
@@ -95,8 +123,11 @@ const Services = () => {
         </div>
 
       </Footer>
-    </>
-  )
-}
 
-export default Services
+
+
+    </div>
+  );
+};
+
+export default AboutUs;
