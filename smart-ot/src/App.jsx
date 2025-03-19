@@ -10,23 +10,13 @@ import Signup from "./Pages/Signup"; // Import Signup
 
 const App = () => {
   return (
-    <Router>
     <div className="app-container">
       <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Heros />} />
-          {/* <Route path="/services" element={<Services />} />
-          <Route path="/agent" element={<Agent />} /> */}
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
-      </main>
-      <Services/>
-      <Agent/>
+      <Heros />
+      {/* <Services/>
+      <Agent/> */}
       <Footers />
     </div>
-  </Router>
   );
 };
 

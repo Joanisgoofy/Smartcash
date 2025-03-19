@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom'; // Import Link
 import Logo from '../assets/Logo.webp'
 import '../App.css'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -11,11 +11,11 @@ const Header = () => {
           <img src={Logo} alt="Smart-OT Logo" width="100" />
         </div>
         <div className='nav-links'>
-          <a href="#services">Products & Services</a>
-          <a href="">Locate an Agent</a>
-          <a href="#help">Help & Support</a>
-          <a href="">About Us</a>
-          <a href="#agent">Become an Agent</a>
+          <Link to="/services">Products & Services</Link>
+          <Link to="">Locate an Agent</Link>
+          <Link to="">Help & Support</Link>
+          <Link to="">About Us</Link>
+          <Link to="/agent">Become an Agent</Link>
         </div>
         <div className='cta'>
           <Link to="/login">

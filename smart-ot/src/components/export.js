@@ -1,42 +1,57 @@
-import { MdNoteAlt } from 'react-icons/md'
-import {
-    FaHome,
-    FaSearch,
-    FaNotesMedical,
-    FaCameraRetro,
-} from 'react-icons/fa';
-import { GoLaw } from 'react-icons/go';
+import {MdOutlineArrowDownward } from 'react-icons/md'
+import {MdAccountBalance } from 'react-icons/md'
+import { MdAddCircleOutline,
+     MdSmartphone ,
+      MdOutlineNetworkCell ,
+       MdReceiptLong,
+       MdElectricBolt ,
+       MdOutlineLock ,
+       MdSportsSoccer
+     } from 'react-icons/md'
+
 
 
 export const service = [
     {
-        icon: MdNoteAlt,
-        title: 'Sell your home',
-        desc: 'We sell your home at the best market price'
+        icon: MdOutlineArrowDownward,
+        title: 'Withdraw',
+       
     },
     {
-        icon: FaHome,
-        title: 'Home loans',
-        desc: 'We offer you free consultancy to get a loan'
+        icon: MdAccountBalance,
+        title: 'Transfer Money',
+        
     },
     {
-        icon: GoLaw,
-        title: 'Legal services',
-        desc: 'Expert legal help for all related property items'
+        icon: MdAddCircleOutline,
+        title: 'Add Money',
+       
     },
     {
-        icon: FaSearch,
-        title: 'Home inspection',
-        desc: 'We make sure you get what you were promised'
+        icon: MdSmartphone,
+        title: 'Airtime',
+       
     },
     {
-        icon: FaNotesMedical,
-        title: 'Evaluation',
-        desc: 'We offer you free evaluation to get a mortgage loan'
+        icon: MdOutlineNetworkCell,
+        title: 'Data',
+        
     },
     {
-        icon: FaCameraRetro,
-        title: 'photoshoot',
-        desc: 'We prepane your home visual presentation'
+        icon: MdReceiptLong,
+        title: 'Pay Bills',
+        
+    },
+    {
+        icon : MdElectricBolt,
+        title : 'Electricity'
+    },
+    {
+        icon : MdOutlineLock,
+        title : 'Safebox'
+    },
+    {
+        icon : MdSportsSoccer,
+        title : 'Betting'
     }
 ];
