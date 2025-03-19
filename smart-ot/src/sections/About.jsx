@@ -50,7 +50,7 @@ const AboutUs = () => {
         </section>
 
         <section
-          className={`flex ml-5 font-bold text-2xl mt-20 inline-block border-b-2 pb-3 cursor-pointer ${isClicked ? "text-red-500 border-b-red-500" : ""
+          className={` ml-5 font-bold text-2xl mt-20 inline-block border-b-2 pb-3 cursor-pointer ${isClicked ? "text-red-500 border-b-red-500" : ""
             }`}
           onClick={() => setIsClicked(true)}
         >

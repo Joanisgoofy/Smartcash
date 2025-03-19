@@ -1,29 +1,65 @@
-import Logo from '../assets/Logo.webp'
-import '../App.css'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "flowbite-react";
+import { HiMenu, HiX } from "react-icons/hi"; // Icons for mobile menu
+import Logo from "../assets/Logo.webp";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <>
-      <header>
-        <div className='logo'>
-          <h1>Smart-OT</h1>
-          <img src={Logo} alt="Smart-OT Logo" width="100" />
+    <header className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
+       {/* Logo */}
+       <div className="flex items-center space-x-3">
+          <img src={Logo} alt="Smart-OT Logo" width="50" />
+          <h1 className="text-lg font-bold text-gray-800">Smart-OT</h1>
         </div>
-        <div className='nav-links'>
-          <Link to="/services">Products & Services</Link>
-          <Link to="">Locate an Agent</Link>
-          <Link to="/help">Help & Support</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/agent">Become an Agent</Link>
-        </div>
-        <div className='cta'>
+
+
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        
+      
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex space-x-6 text-gray-700">
+          <Link to="/services" className="hover:text-blue-600">Products & Services</Link>
+          <Link to="#" className="hover:text-blue-600">Locate an Agent</Link>
+          <Link to="#" className="hover:text-blue-600">Help & Support</Link>
+          <Link to="/about" className="hover:text-blue-600">About Us</Link>
+          <Link to="/agent" className="hover:text-blue-600">Become an Agent</Link>
+        </nav>
+
+       
+
+        {/* Mobile Menu Button */}
+        <button className="md:hidden text-3xl text-gray-700" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <HiX /> : <HiMenu />}
+        </button>
+      </div>
+
+       {/* Login Button */}
+       <div className="hidden md:block">
           <Link to="/login">
-            <button>Login / Signup</button>
+            <Button gradientDuoTone="cyanToBlue">Login / Signup</Button>
           </Link>
         </div>
-      </header>
-    </>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <nav className="md:hidden bg-white border-t border-gray-200 shadow-md">
+          <div className="flex flex-col items-center py-4 space-y-4">
+            <Link to="/services" className="hover:text-blue-600 text-black" onClick={() => setIsOpen(false)}>Products & Services</Link>
+            <Link to="#" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>Locate an Agent</Link>
+            <Link to="#" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>Help & Support</Link>
+            <Link to="/about" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>About Us</Link>
+            <Link to="/agent" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>Become an Agent</Link>
+            <Link to="/login">
+              <Button gradientDuoTone="cyanToBlue" onClick={() => setIsOpen(false)}>Login / Signup</Button>
+            </Link>
+          </div>
+        </nav>
+      )}
+    </header>
   );
 };
 

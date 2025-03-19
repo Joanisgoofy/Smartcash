@@ -1,6 +1,5 @@
 import React from 'react'
 import { service } from '../components/export';
-import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import Logo from '../assets/Logo.webp'
 import '../App.css'
 import { Link } from 'react-router-dom';
@@ -28,26 +27,30 @@ const Services = () => {
           </Link>
         </div>
       </header>
-      <section id='services' className='lg:w-[95%] w-full h-fit m-auto rounded-xl flex flex-col justify-center items-start lg:px-20 px-6 py-20 gap-10'>
-        <div className='flex flex-col justify-center items-start gap-4'>
-          <h1 data-aos="zoom-in" className='text-red-500 dark:text-white'>OUR SERVICES</h1>
-          <h1 data-aos="zoom-in" className='text-black text-[40px] font-semibold leading-10 dark:text-white'>Top real estate <br /> services available</h1>
+      <section className="w-[95%] mx-auto py-20 flex flex-col gap-10">
+        <div className="text-center">
+          <h1 className="text-red-500 text-lg uppercase">Our Services</h1>
+          <h2 className="text-4xl font-semibold text-gray-900 dark:text-white leading-tight">
+            Top Real Estate <br /> Services Available
+          </h2>
         </div>
 
-        <div id='service-box' className='grid lg:grid-cols-3 grid-cols-1 justify-center items-center gap-8'>
-          {
-            service.map((item, index) => (
-              <div data-aos="zoom-in" data-aos-delay="200" key={index} className='bg-white dark:bg-black h-[350px] px-8 py-16 flex flex-col justify-center items-start gap-4 rounded-xl border-b-[5px] border-red-600 hover:bg-red-300 cursor-pointer'>
-                <div className='p-6 rounded-full bg-red-200'>
-                  <item.icon className='text-red-600 size-10 transform hover:scale-110 transition-transform duration-300 cursor-pointer' />
-                </div>
-
-                <h1 className='text-black text-[22px] font-semibold dark:text-white'>{item.title}</h1>
-                <p className='text-lg text-slate-700 dark:text-white'>{item.desc}</p>
-                
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+          {service.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md border-b-4 border-red-500 hover:scale-105 transition-transform cursor-pointer"
+            >
+              <div className="flex items-center justify-center w-16 h-16 bg-red-200 rounded-full mb-4">
+                <item.icon className="text-red-600 text-3xl" />
               </div>
-            ))
-          }
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mt-2">
+                {/* Placeholder for descriptions (if needed) */}
+                Secure and reliable {item.title.toLowerCase()} services.
+              </p>
+            </div>
+          ))}
         </div>
       </section>
       <Footer id="help" container className='bg-black'>

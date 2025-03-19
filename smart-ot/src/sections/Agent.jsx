@@ -28,62 +28,48 @@ const Agent = () => {
                     </Link>
                 </div>
             </header>
-            <section id='agent' className=' w-full m-auto lg:px-40 px-10 py-20 grid lg:grid-cols-2 grid-cols-1 justify-center items-center gap-10'>
-
-
-                <form className="flex max-w-md flex-col gap-4">
-                    <h1 className='text-black-500 dark:text-white text-5xl'>Becoming An Agent</h1>
+            
+            {/* Agent Registration Section */}
+            <section className="w-full max-w-6xl mx-auto px-6 lg:px-20 py-16 grid lg:grid-cols-2 gap-10">
+                {/* Registration Form */}
+                <form className="flex flex-col gap-6 bg-white p-6 shadow-lg rounded-lg">
+                    <h1 className="text-3xl font-bold text-gray-800">Become an Agent</h1>
+                    
                     <div>
-                        <div>
-                            <div className="mb-2 block">
-                                <Label htmlFor="email2" value="Full Name" />
-                            </div>
-                            <TextInput id="email2" type="" required shadow />
-                        </div>
-                        <div>
-                            <div className="mb-2 block">
-                                <Label htmlFor="password2" value="Mobile Number" />
-                            </div>
-                            <TextInput id="password2" type="password" required shadow />
-                        </div>
-                        <div>
-                            <div className="mb-2 block">
-                                <Label htmlFor="repeat-password" value="Email" />
-                            </div>
-                            <TextInput id="repeat-password" type="password" required shadow />
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <Checkbox id="agree" />
-                            <Label htmlFor="agree" className="flex">
-                                I agree with the&nbsp;
-                                {/* <Link href="#" className="text-cyan-600 hover:underline dark:text-cyan-500">
-                            terms and conditions
-                        </Link> */}
-                            </Label>
-                        </div>
+                        <Label htmlFor="fullname" value="Full Name" />
+                        <TextInput id="fullname" type="text" required shadow />
                     </div>
-                    <Button type="submit">Register new account</Button>
+                    <div>
+                        <Label htmlFor="mobile" value="Mobile Number" />
+                        <TextInput id="mobile" type="tel" required shadow />
+                    </div>
+                    <div>
+                        <Label htmlFor="email" value="Email" />
+                        <TextInput id="email" type="email" required shadow />
+                    </div>
+                    <div>
+                        <Label htmlFor="nin" value="NIN" />
+                        <TextInput id="nin" type="text" required shadow />
+                    </div>
+                    <div>
+                        <Label htmlFor="bvn" value="BVN" />
+                        <TextInput id="bvn" type="text" required shadow />
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <Checkbox id="agree" />
+                        <Label htmlFor="agree">
+                            I agree with the <Link to="#" className="text-blue-600 hover:underline">terms and conditions</Link>
+                        </Label>
+                    </div>
+                    <Button type="submit" gradientDuoTone="cyanToBlue">Register Now</Button>
                 </form>
-                <div>
-                    <div>
-                        <div className="mb-2 block">
-                            <Label htmlFor="email2" value="NIN" />
-                        </div>
-                        <TextInput id="email2" type="" required shadow />
-                    </div>
-                    <div>
-                        <div className="mb-2 block">
-                            <Label htmlFor="password2" value="BVN" />
-                        </div>
-                        <TextInput id="password2" type="password" required shadow />
-                    </div>
-                    <div>
-                        <div className="mb-2 block">
-                            <Label htmlFor="repeat-password" value="Repeat password" />
-                        </div>
-                        <TextInput id="repeat-password" type="password" required shadow />
-                    </div>
 
+                {/* Image / Info Section */}
+                <div className="flex flex-col justify-center items-center text-center">
+                    <img src={Logo} alt="Agent Registration" className="w-40 mb-6" />
+                    <p className="text-gray-600 text-lg">
+                        Join Smart-OT as an agent and enjoy seamless transactions, secure payments, and a growing community of trusted financial partners.
+                    </p>
                 </div>
             </section>
             <Footer id="help" container className='bg-black'>
