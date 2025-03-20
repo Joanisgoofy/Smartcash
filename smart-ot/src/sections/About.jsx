@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Logo from '../assets/Logo.webp'
-import '../App.css'
 import { Footer } from "flowbite-react";
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { Link } from 'react-router-dom'
 
+
 const AboutUs = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked , setIsClicked ] = useState(false);
+  
 
   return (
     <div id="about" >
@@ -16,9 +17,9 @@ const AboutUs = () => {
           <img src={Logo} alt="Smart-OT Logo" width="100" />
         </div>
         <div className='nav-links'>
-          <Link to="/services">Products & Services</Link>
-          <Link to="">Locate an Agent</Link>
-          <Link to="">Help & Support</Link>
+          <Link to='/home'>Home</Link>
+          <Link to="/services"> Services</Link>
+          <Link to="/help">Help & Support</Link>
           <Link to="/about">About Us</Link>
           <Link to="/agent">Become an Agent</Link>
         </div>
@@ -27,6 +28,8 @@ const AboutUs = () => {
             <button>Login / Signup</button>
           </Link>
         </div>
+
+
       </header>
       <div className="p-5">
         <section className="ml-10">
@@ -77,52 +80,51 @@ const AboutUs = () => {
           </div>
         </section>
       </div>
-
-      <Footer id="help" container className='bg-black'>
-        <div className="w-full">
-          <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-            <div className='logo'>
-              <h1 className='text-gray-400'>Smart-OT</h1>
-              <img src={Logo} alt="Smart-OT Logo" width="100" />
+     <Footer id="help" container className='bg-black'>
+      <div className="w-full">
+        <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+           <div className='logo'>
+                  <h1 className='text-gray-400'>Smart-OT</h1>
+                  <img src={Logo} alt="Smart-OT Logo" width="100" />
+                  </div>
+          <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+            <div>
+              <Footer.Title title="about" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Flowbite</Footer.Link>
+                <Footer.Link href="#">Tailwind CSS</Footer.Link>
+              </Footer.LinkGroup>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-              <div>
-                <Footer.Title title="about" />
-                <Footer.LinkGroup col>
-                  <Footer.Link href="#">Flowbite</Footer.Link>
-                  <Footer.Link href="#">Tailwind CSS</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
-              <div>
-                <Footer.Title title="Follow us" />
-                <Footer.LinkGroup col>
-                  <Footer.Link href="#">Github</Footer.Link>
-                  <Footer.Link href="#">Discord</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
-              <div>
-                <Footer.Title title="Legal" />
-                <Footer.LinkGroup col>
-                  <Footer.Link href="#">Privacy Policy</Footer.Link>
-                  <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
+            <div>
+              <Footer.Title title="Follow us" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Facebook</Footer.Link>
+                <Footer.Link href="#">Instagram</Footer.Link>
+              </Footer.LinkGroup>
             </div>
-          </div>
-          <Footer.Divider />
-          <div className="w-full sm:flex sm:items-center sm:justify-between">
-            <Footer.Copyright href="#" by="Flowbite™" year={2022} />
-            <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-              <Footer.Icon href="#" icon={BsFacebook} />
-              <Footer.Icon href="#" icon={BsInstagram} />
-              <Footer.Icon href="#" icon={BsTwitter} />
-              <Footer.Icon href="#" icon={BsGithub} />
-              <Footer.Icon href="#" icon={BsDribbble} />
+            <div>
+              <Footer.Title title="Legal" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">Privacy Policy</Footer.Link>
+                <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+              </Footer.LinkGroup>
             </div>
           </div>
         </div>
-
-      </Footer>
+        <Footer.Divider />
+        <div className="w-full sm:flex sm:items-center sm:justify-between">
+          <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+          <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+            <Footer.Icon href="#" icon={BsFacebook} />
+            <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon href="#" icon={BsTwitter} />
+            <Footer.Icon href="#" icon={BsGithub} />
+            <Footer.Icon href="#" icon={BsDribbble} />
+          </div>
+        </div>
+      </div>
+      
+     </Footer>
 
 
 

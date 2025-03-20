@@ -22,9 +22,9 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 text-gray-700">
-          <Link to="/services" className="hover:text-blue-600">Products & Services</Link>
-          <Link to="#" className="hover:text-blue-600">Locate an Agent</Link>
-          <Link to="#" className="hover:text-blue-600">Help & Support</Link>
+          <Link to="/home" className="hover:text-blue-600"> Home</Link>
+          <Link to="/services" className="hover:text-blue-600"> Services</Link>
+          <Link to="/help" className="hover:text-blue-600">Help & Support</Link>
           <Link to="/about" className="hover:text-blue-600">About Us</Link>
           <Link to="/agent" className="hover:text-blue-600">Become an Agent</Link>
         </nav>
@@ -48,8 +48,8 @@ const Header = () => {
       {isOpen && (
         <nav className="md:hidden bg-white border-t border-gray-200 shadow-md">
           <div className="flex flex-col items-center py-4 space-y-4">
+            <Link to="/home" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>Home</Link>
             <Link to="/services" className="hover:text-blue-600 text-black" onClick={() => setIsOpen(false)}>Products & Services</Link>
-            <Link to="#" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>Locate an Agent</Link>
             <Link to="#" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>Help & Support</Link>
             <Link to="/about" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>About Us</Link>
             <Link to="/agent" className="hover:text-blue-600  text-black" onClick={() => setIsOpen(false)}>Become an Agent</Link>

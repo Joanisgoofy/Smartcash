@@ -13,7 +13,7 @@ import AboutUs from './sections/About';
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div id='home' className="app-container">
       <Header />
       <Heros />
       <Footers />
