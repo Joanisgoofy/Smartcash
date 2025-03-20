@@ -25,8 +25,8 @@ const Footers = () => {
             <div>
               <Footer.Title title="Follow us" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Github</Footer.Link>
-                <Footer.Link href="#">Discord</Footer.Link>
+                <Footer.Link href="#">Facebook</Footer.Link>
+                <Footer.Link href="#">Instagram</Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>

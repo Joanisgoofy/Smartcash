@@ -38,12 +38,12 @@ const AboutUs = () => {
             <h4>
               <span className="font-bold">SMART-OT</span> is a leading and
               innovative Payment Service Bank with an overarching vision of
-              bridging the financial divide by providing rural and urban
+              bridging the financial <br></br> divide by providing rural and urban
               Nigerians secured and reliable banking services as well as
-              supporting the Central Bank of Nigeria’s (CBN) drive to ensure
-              financial inclusion for every Nigerian. With its corporate
+              supporting the <br></br> Central Bank of Nigeria’s (CBN) drive to ensure
+              financial inclusion for every Nigerian. With its corporate <br></br>
               headquarters in Lagos, Nigeria, Smart-OT’s overarching objective is
-              to ensure financial inclusion for everyone including persons in the
+              to ensure financial inclusion for everyone <br></br> including persons in the
               furthest and remotest parts of Nigeria.
             </h4>
           </div>
@@ -65,13 +65,13 @@ const AboutUs = () => {
 
             <h4>
               SMART-OT was established in 2025 following the approval of the
-              Central Bank of Nigeria to actualize its financial inclusion goal
-              for every Nigerian, especially the unbanked and underbanked.
-              Smart-OT enables Person-to-Person payment service (P2P) that allows
-              individuals to send and receive money from anyone around the globe
-              through their mobile phones or at the nearest merchant shop outlet.
+              Central Bank <br></br> of Nigeria to actualize its financial inclusion goal
+              for every Nigerian, especially the <br></br> unbanked and underbanked.
+              Smart-OT enables Person-to-Person payment <br></br> service (P2P) that allows
+              individuals to send and receive money from anyone around <br></br> the globe
+              through their mobile phones or at the nearest merchant shop outlet. <br></br>
               The primary purpose of Smart-OT is to deepen financial inclusion,
-              appropriating high-volume and low-value transactions in a safe,
+              appropriating <br></br> high-volume and low-value transactions in a safe,
               technology-driven environment.
             </h4>
           </div>
