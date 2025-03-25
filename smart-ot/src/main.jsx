@@ -18,6 +18,7 @@ ReactDOM.createRoot(root).render(
   <StrictMode>
     <BrowserRouter>
     <Routes>
+          <Route path="/" element={<App />} />
           <Route path="/home" element={<App />} />
           <Route path="/services" element={<Services />} />
           <Route path="/agent" element={<Agent />} />
