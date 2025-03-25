@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'
-import Logo from '../assets/Logo.webp'
+import Logo from '../assets/Logo.png'
 import { Footer } from "flowbite-react";
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 const HelpAndSupport = () => {
@@ -67,14 +67,14 @@ const HelpAndSupport = () => {
       </header>
       {/* Help and Support Section */}
       <section className="mb-8">
-        <div>
-          <h3 className="text-center text-2xl text-red-500 font-bold">
+        <div className="mb-20">
+          <h3 className="text-center text-2xl text-red-600 font-bold">
             HELP AND SUPPORT
           </h3>
         </div>
 
         <div className="ml-20 mb-6">
-          <h3 className="text-lg text-red-500 font-bold">CONTACT US</h3>
+          <h3 className="text-lg text-red-600 font-bold">CONTACT US</h3>
         </div>
 
         <div className="ml-20">
@@ -97,7 +97,7 @@ const HelpAndSupport = () => {
       {/* FAQ Section */}
       <section>
         <main>
-          <h3 className="text-lg text-red-500 font-bold ml-20 mb-8">FAQ</h3>
+          <h3 className="text-lg text-red-600 font-bold ml-20 mb-8">FAQ</h3>
 
           <div className="ml-20 mr-20">
             {faqData.map((faq) => (

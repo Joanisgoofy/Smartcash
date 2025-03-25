@@ -1,6 +1,6 @@
 import React from 'react'
 import { service } from '../components/export';
-import Logo from '../assets/Logo.webp'
+import Logo from '../assets/Logo.png'
 import '../App.css'
 import { Link } from 'react-router-dom';
 import { Footer } from "flowbite-react";

@@ -1,13 +1,13 @@
 import { useState } from "react";
-import Logo from '../assets/Logo.webp'
+import Logo from '../assets/Logo.png'
 import { Footer } from "flowbite-react";
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
 import { Link } from 'react-router-dom'
 
 
 const AboutUs = () => {
-  const [isClicked , setIsClicked ] = useState(false);
-  
+  const [isClicked, setIsClicked] = useState(false);
+  const [activeTab, setActiveTab] = useState("At A Glance");
 
   return (
     <div id="about" >
@@ -28,8 +28,6 @@ const AboutUs = () => {
             <button>Login / Signup</button>
           </Link>
         </div>
-
-
       </header>
       <div className="p-5">
         <section className="ml-10">
@@ -43,24 +41,49 @@ const AboutUs = () => {
               innovative Payment Service Bank with an overarching vision of
               bridging the financial <br></br> divide by providing rural and urban
               Nigerians secured and reliable banking services as well as
-              supporting the <br></br> Central Bank of Nigeria’s (CBN) drive to ensure
+              supporting the <br></br> Central Bank of Nigeria's (CBN) drive to ensure
               financial inclusion for every Nigerian. With its corporate <br></br>
-              headquarters in Lagos, Nigeria, Smart-OT’s overarching objective is
+              headquarters in Lagos, Nigeria, Smart-OT's overarching objective is
               to ensure financial inclusion for everyone <br></br> including persons in the
               furthest and remotest parts of Nigeria.
             </h4>
           </div>
         </section>
 
-        <section
-          className={` ml-5 font-bold text-2xl mt-20 inline-block border-b-2 pb-3 cursor-pointer ${isClicked ? "text-red-500 border-b-red-500" : ""
-            }`}
-          onClick={() => setIsClicked(true)}
-        >
-          <p className="mx-4 inline-block">At A Glance</p>
-          <p className="mx-4 inline-block">Our Values</p>
-          <p className="mx-4 inline-block">Board of Directors</p>
-        </section>
+        <div className={`w-full border-b-2 relative group ${isClicked ? 'border-red-600' : 'border-red-200'}`}>
+          <section className="ml-5 font-bold text-2xl mt-20 inline-block pb-3 cursor-pointer">
+            <Link 
+              to="#at-a-glance" 
+              className={`mx-4 inline-block ${activeTab === "At A Glance" ? 'text-red-600' : 'group-hover:text-red-600'}`}
+              onClick={() => {
+                setIsClicked(true);
+                setActiveTab("At A Glance");
+              }}
+            >
+              At A Glance
+            </Link>
+            <Link 
+              to="#our-values" 
+              className={`mx-4 inline-block ${activeTab === "Our Values" ? 'text-red-600' : 'group-hover:text-red-600'}`}
+              onClick={() => {
+                setIsClicked(true);
+                setActiveTab("Our Values");
+              }}
+            >
+              Our Values
+            </Link>
+            <Link 
+              to="#board-of-directors" 
+              className={`mx-4 inline-block ${activeTab === "Board of Directors" ? 'text-red-600' : 'group-hover:text-red-600'}`}
+              onClick={() => {
+                setIsClicked(true);
+                setActiveTab("Board of Directors");
+              }}
+            >
+              Board of Directors
+            </Link>
+          </section>
+        </div>
 
         <section className="ml-10 mt-10">
           <div>
@@ -77,6 +100,13 @@ const AboutUs = () => {
               appropriating <br></br> high-volume and low-value transactions in a safe,
               technology-driven environment.
             </h4>
+          </div>
+
+
+          <div>
+            <h3 className="text-2xl font-bold mb-5">
+            Our Values
+            </h3>
           </div>
         </section>
       </div>
@@ -123,11 +153,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      
      </Footer>
-
-
-
     </div>
   );
 };

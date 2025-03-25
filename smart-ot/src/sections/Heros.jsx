@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../assets/Logo.webp'
+import Logo from '../assets/Logo.png'
 
 const Heros = () => {
   return (
@@ -9,7 +9,7 @@ const Heros = () => {
         <img src={Logo} alt="about image" className='rounded-2xl lg:w-[500px] lg:h-[600px]' />
       </div>
       <div className='flex flex-col justify-center items-start gap-8'>
-        <h1  className='text-red-500 dark:text-white'>WHO WE ARE</h1>
+        <h1  className='text-blue-700 font-extrabold dark:text-white'>WHO WE ARE</h1>
         <h1 className='text-black text-[40px] font-semibold leading-10 dark:text-white'>We Help Clients Buy And Sell Houses Since 2001</h1>
         <p className='text-x1 text-gray-600 dark:text-white text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat, sit porro non facere minima recusandae commodi quisquam illo, error deserunt dolore. Nam assumenda blanditiis ullam incidunt?</p>
         <button className='bg-red-600 dark:bg-red-700 hover:bg-black  dark:hover:text-black text-ig p-4 text-white font-semibold rounded-xl cursor-pointer transform hover:scale-110 transition-transform duration-300'>READ MORE</button>

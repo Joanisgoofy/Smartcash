@@ -1,7 +1,7 @@
 import React from 'react'
 import { Footer } from "flowbite-react";
 import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
-import Logo from '../assets/Logo.webp'
+import Logo from '../assets/Logo.png'
 import '../App.css'
 
 const Footers = () => {

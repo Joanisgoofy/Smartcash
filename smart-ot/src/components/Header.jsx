@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "flowbite-react";
 import { HiMenu, HiX } from "react-icons/hi"; // Icons for mobile menu
-import Logo from "../assets/Logo.webp";
+import Logo from "../assets/Logo.png";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
